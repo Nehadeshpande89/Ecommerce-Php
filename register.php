@@ -4,7 +4,6 @@
 	
 
 	include 'includes/session.php';
-	include 'includes/Email_library.php';
   
 
 	if(isset($_POST['signup'])){
