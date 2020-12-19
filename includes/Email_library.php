@@ -3,10 +3,12 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+include 'ChromePhp.php';
 
 function sendEmail($email){
 
-				       console.log("Comoing here")
+                    	ChromePhp::log('Hello console!');
+
 			    		require 'vendor/autoload.php';
 
 					    $mail = new PHPMailer(true);       
