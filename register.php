@@ -66,30 +66,27 @@
 					//Load phpmailer
 		    		require 'vendor/autoload.php';
 
-		    		$mail = new PHPMailer(true);                             
+					$mail = new PHPMailer(true);       
+
+
+
 				    try {
 				        //Server settings
 				        $mail->isSMTP();                                     
 				        $mail->Host = 'email-smtp.eu-west-1.amazonaws.com';                      
 				        $mail->SMTPAuth = true;                               
 				        $mail->Username = 'AKIA5VEIXVYZ3PPWJGII';     
-				        $mail->Password = 'BF9yftmRXlUmALXoV9zvPZpvtE0OmH+ZKoZxMRdbDRSL';                    
-				        $mail->SMTPOptions = array(
-				            'ssl' => array(
-				            'verify_peer' => false,
-				            'verify_peer_name' => false,
-				            'allow_self_signed' => true
-				            )
-				        );                         
+						$mail->Password = 'BF9yftmRXlUmALXoV9zvPZpvtE0OmH+ZKoZxMRdbDRSL';            
+						$mail->sender = 'nehadeshpande1995@gmail.com';
+				     	$mail->senderName = 'Neha Deshpande';
+					    $mail->recipient = $email;                           
 				        $mail->SMTPSecure = 'tls';                           
 				        $mail->Port = 465;                                   
 
-				        $mail->setFrom('nehadeshpande1995@gmail.com');
+				        $mail->setFrom($mail->sender,$mail->senderName);
 				        
 				        //Recipients
-				        $mail->addAddress($email);              
-				        $mail->addReplyTo('nehadeshpande1995@gmail.com');
-				       
+				        $mail->addAddress($mail->recipient);              
 				        //Content
 				        $mail->isHTML(true);                                  
 				        $mail->Subject = 'ECommerce Site Sign Up';
