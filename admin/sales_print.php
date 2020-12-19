@@ -74,9 +74,9 @@
 	      ';  
 	    $content .= generateRow($from, $to, $conn);  
 	    $content .= '</table>';  
-	    $pdf->writeHTML($content);  
+		$pdf->writeHTML($content);  
+		ob_end_clean();
 	    $pdf->Output('sales.pdf', 'I');
-
 	    $pdo->close();
 
 	}

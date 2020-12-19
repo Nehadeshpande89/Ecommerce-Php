@@ -146,8 +146,8 @@ CREATE TABLE IF NOT EXISTS `sales` (
 --
 
 INSERT INTO `sales` (`id`, `user_id`, `pay_id`, `sales_date`) VALUES
-(9, 9, 'PAY-1RT494832H294925RLLZ7TZA', '2018-05-10'),
-(10, 9, 'PAY-21700797GV667562HLLZ7ZVY', '2018-05-10');
+(9, 9, 'PAY-1RT494832H294925RLLZ7TZA', '2020-12-12'),
+(10, 9, 'PAY-21700797GV667562HLLZ7ZVY', '2020-12-18');
 
 -- --------------------------------------------------------
 
