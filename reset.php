@@ -35,26 +35,26 @@
 	    		$mail = new PHPMailer(true);                             
 			    try {
 			        //Server settings
-			        $mail->isSMTP();                                     
-			        $mail->Host = 'smtp.gmail.com';                      
-			        $mail->SMTPAuth = true;                               
-			        $mail->Username = 'testsourcecodester@gmail.com';     
-			        $mail->Password = 'mysourcepass';                    
-			        $mail->SMTPOptions = array(
-			            'ssl' => array(
-			            'verify_peer' => false,
-			            'verify_peer_name' => false,
-			            'allow_self_signed' => true
-			            )
-			        );                         
-			        $mail->SMTPSecure = 'ssl';                           
-			        $mail->Port = 465;                                   
-
-			        $mail->setFrom('testsourcecodester@gmail.com');
-			        
-			        //Recipients
-			        $mail->addAddress($email);              
-			        $mail->addReplyTo('testsourcecodester@gmail.com');
+					$mail->Host ='email-smtp.us-east-1.amazonaws.com';						                     
+					$mail->SMTPAuth = true;                               
+					$mail->Username = 'AKIA5VEIXVYZ7WCS6SEY';     
+					$mail->Password = 'BHA/c8/k/EFXNdsp0ed10uwYZDHxhc2A3/jMvfOywsb7';						            
+					$mail->sender = 'nehadeshpande1995@gmail.com';
+					 $mail->senderName = 'Neha Deshpande';
+					$mail->recipient = $email;                           
+					$mail->SMTPSecure = 'tls';                           
+					$mail->Port = 587;                                   
+					$mail->SMTPOptions = array(
+						'ssl' => array(
+						'verify_peer' => false,
+						'verify_peer_name' => false,
+						'allow_self_signed' => true
+						)
+						);
+					$mail->setFrom($mail->sender,$mail->senderName);
+					
+					//Recipients
+					$mail->addAddress($mail->recipient); 
 			       
 			        //Content
 			        $mail->isHTML(true);                                  
