@@ -75,8 +75,8 @@
 				        $mail->isSMTP();                                     
 				        $mail->Host = 'email-smtp.eu-west-1.amazonaws.com';                      
 				        $mail->SMTPAuth = true;                               
-				        $mail->Username = 'AKIA5VEIXVYZ3PPWJGII';     
-						$mail->Password = 'BF9yftmRXlUmALXoV9zvPZpvtE0OmH+ZKoZxMRdbDRSL';            
+				        $mail->Username = 'AKIA5VEIXVYZ44G5Y4XM';     
+						$mail->Password = 'BFTXAeCmGPwYIZtiQcl2Hmttg+kHfkGFoiGvSd/8seAF';						            
 						$mail->sender = 'nehadeshpande1995@gmail.com';
 				     	$mail->senderName = 'Neha Deshpande';
 					    $mail->recipient = $email;                           
