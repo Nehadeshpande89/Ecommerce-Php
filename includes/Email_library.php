@@ -3,12 +3,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-include 'ChromePhp.php';
 
 function sendEmail($email){
-
-                    	ChromePhp::log('Hello console!');
-
+   
+  
 			    		require 'vendor/autoload.php';
 
 					    $mail = new PHPMailer(true);       
@@ -23,7 +21,7 @@ function sendEmail($email){
 					    $mail->recipient = $email;                           
 				        $mail->SMTPSecure = 'tls';                           
 				        $mail->Port = 587;                                   
-						$mail->SMTPOptions = array(
+						$mail->SMTPOptions = array(  
 							'ssl' => array(  
 							'verify_peer' => false,  
 							'verify_peer_name' => false,
