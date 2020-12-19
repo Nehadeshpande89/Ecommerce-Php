@@ -3,7 +3,7 @@
 	use PHPMailer\PHPMailer\Exception;
 
 	include 'includes/session.php';
-	require_once('Email_library.php');
+	include 'Email_library.php';
 
 
 	if(isset($_POST['signup'])){
@@ -65,14 +65,14 @@
 					";
 
 					//Load phpmailer
-		    		// require 'vendor/autoload.php';
+		    		require 'vendor/autoload.php';
 
-					// $mail = new PHPMailer(true);       
+					$mail = new PHPMailer(true);       
   
 
 
 				    try {
-				        // //Server settings
+				        //Server settings
 				        // $mail->isSMTP();                                     
 				        // $mail->Host ='email-smtp.us-east-1.amazonaws.com';						                     
 				        // $mail->SMTPAuth = true;                               
@@ -109,7 +109,7 @@
 				        $_SESSION['success'] = 'Account created. Check your email to activate.';
 				        header('location: signup.php');
 
-				    } 
+				    }   
 				    catch (Exception $e) {
 				        $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
 				        header('location: signup.php');
