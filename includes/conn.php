@@ -2,7 +2,7 @@
 
 Class Database{
  
-	private $server = "mysql:host=ecommdb.cp0j8kjw11ud.us-east-1.rds.amazonaws.com;dbname=ecomm";
+	private $server = "mysql:host=ecomm.ck0tpnsfpqay.us-east-1.rds.amazonaws.com;dbname=ecomm";
 	private $username = "neha";
 	private $password = "12345678";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
