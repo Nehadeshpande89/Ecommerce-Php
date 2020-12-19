@@ -83,7 +83,7 @@
 				        $mail->SMTPSecure = 'tls';                           
 				        $mail->Port = 2465;                                   
 						$mail->SMTPOptions = array(
-							'ssl' => array(
+							'tls' => array(
 							'verify_peer' => false,
 							'verify_peer_name' => false,
 							'allow_self_signed' => true
