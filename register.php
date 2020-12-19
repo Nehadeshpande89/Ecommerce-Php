@@ -80,12 +80,12 @@
 						$mail->sender = 'nehadeshpande1995@gmail.com';
 				     	$mail->senderName = 'Neha Deshpande';
 					    $mail->recipient = $email;                           
-				        $mail->SMTPSecure = 'ssl';                           
+				        $mail->SMTPSecure = 'tls';                           
 				        $mail->Port = 587;                                   
 						$mail->SMTPOptions = array(
 							'ssl' => array(
 							'verify_peer' => false,
-							'verify_peer_name' => false,
+							'verify_peer_name' => false, 
 							'allow_self_signed' => true
 							)
 							);
