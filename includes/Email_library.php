@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 function sendEmail($email){
 
 
-	                echo "Cominge ere ";
+	                     print_r ("coming here") ;
 			    		require 'vendor/autoload.php';
 
 					    $mail = new PHPMailer(true);       
