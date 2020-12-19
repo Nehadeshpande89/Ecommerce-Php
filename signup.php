@@ -79,7 +79,8 @@
       <a href="index.php"><i class="fa fa-home"></i> Home</a>
   	</div>
 </div>
-	
+<script src="https://www.google.com/recaptcha/api.js?render=6LegPg0aAAAAAEzUi9qA6yjuii7uli2EltGtlSTc"></script>
+
 <?php include 'includes/scripts.php' ?>
 </body>
 </html>
