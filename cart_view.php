@@ -32,7 +32,8 @@
 	        		<?php
 	        			if(isset($_SESSION['user'])){
 	        				echo "
-	        					<div id='paypal-button'></div>
+								<div id='paypal-button'></div>
+								<div id='COD'></div>
 	        				";
 	        			}
 	        			else{
@@ -154,14 +155,13 @@ function getTotal(){
 	});
 }
 </script>
-<!-- Paypal Express -->
+
 <script>
 paypal.Button.render({
-    env: 'sandbox', // change for production if app is live,
+    env: 'sandbox',
 
 	client: {
-        sandbox:    'ASb1ZbVxG5ZFzCWLdYLi_d1-k5rmSjvBZhxP2etCxBKXaJHxPba13JJD_D3dTNriRbAv3Kp_72cgDvaZ',
-        //production: 'AaBHKJFEej4V6yaArjzSx9cuf-UYesQYKqynQVCdBlKuZKawDDzFyuQdidPOBSGEhWaNQnnvfzuFB9SM'
+        sandbox:    'ASb1ZbVxG5ZFzCWLdYLi_d1-k5rmSjvBZhxP2etCxBKXaJHxPba13JJD_D3dTNriRbAv3Kp_72cgDvaZ'
     },
 
     commit: true, // Show a 'Pay Now' button
