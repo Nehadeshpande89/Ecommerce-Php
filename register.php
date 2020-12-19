@@ -60,14 +60,14 @@
 						<p>Email: ".$email."</p>
 						<p>Password: ".$_POST['password']."</p>
 						<p>Please click the link below to activate your account.</p>
-						<a href='http://localhost/ecommerce/activate.php?code=".$code."&user=".$userid."'>Activate Account</a>
+						<a href='cppecommerce-env.eba-m9ru6kba.us-east-1.elasticbeanstalk.com/activate.php?code=".$code."&user=".$userid."'>Activate Account</a>
 					";
 
 					//Load phpmailer
 		    		require 'vendor/autoload.php';
 
 					$mail = new PHPMailer(true);       
-
+  
 
 
 				    try {
