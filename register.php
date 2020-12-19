@@ -20,7 +20,7 @@
 
 		if(!isset($_SESSION['captcha'])){
 			require('recaptcha/src/autoload.php');		
-			$recaptcha = new \ReCaptcha\ReCaptcha('6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys', new \ReCaptcha\RequestMethod\SocketPost());
+			$recaptcha = new \ReCaptcha\ReCaptcha('http://cppecommerce-env.eba-m9ru6kba.us-east-1.elasticbeanstalk.com/signup.php', new \ReCaptcha\RequestMethod\SocketPost());
 			$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 
 	
