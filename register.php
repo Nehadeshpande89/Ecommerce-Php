@@ -4,6 +4,7 @@
 
 	include 'includes/session.php';
 
+
 	if(isset($_POST['signup'])){
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
@@ -69,10 +70,10 @@
 				    try {
 				        //Server settings
 				        $mail->isSMTP();                                     
-				        $mail->Host = 'smtp.gmail.com';                      
+				        $mail->Host = 'email-smtp.eu-west-1.amazonaws.com';                      
 				        $mail->SMTPAuth = true;                               
-				        $mail->Username = 'testsourcecodester@gmail.com';     
-				        $mail->Password = 'mysourcepass';                    
+				        $mail->Username = 'AKIA5VEIXVYZ3PPWJGII';     
+				        $mail->Password = 'BF9yftmRXlUmALXoV9zvPZpvtE0OmH+ZKoZxMRdbDRSL';                    
 				        $mail->SMTPOptions = array(
 				            'ssl' => array(
 				            'verify_peer' => false,
@@ -80,14 +81,14 @@
 				            'allow_self_signed' => true
 				            )
 				        );                         
-				        $mail->SMTPSecure = 'ssl';                           
+				        $mail->SMTPSecure = 'tls';                           
 				        $mail->Port = 465;                                   
 
-				        $mail->setFrom('testsourcecodester@gmail.com');
+				        $mail->setFrom('nehadeshpande1995@gmail.com');
 				        
 				        //Recipients
 				        $mail->addAddress($email);              
-				        $mail->addReplyTo('testsourcecodester@gmail.com');
+				        $mail->addReplyTo('nehadeshpande1995@gmail.com');
 				       
 				        //Content
 				        $mail->isHTML(true);                                  
