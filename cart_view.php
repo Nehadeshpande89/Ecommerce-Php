@@ -33,7 +33,6 @@
 	        			if(isset($_SESSION['user'])){
 	        				echo "
 								<div id='paypal-button'></div>
-								<div id='COD'></div>
 	        				";
 	        			}
 	        			else{
