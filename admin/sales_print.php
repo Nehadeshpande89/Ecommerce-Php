@@ -76,7 +76,7 @@
 	    $content .= '</table>';  
 		$pdf->writeHTML($content);  
 		ob_end_clean();
-	    $pdf->Output('sales.pdf', 'I');
+	    $pdf->Output('report.pdf', 'I');
 	    $pdo->close();
 
 	}
