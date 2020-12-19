@@ -6,8 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 function sendEmail($email){
 
-
-                 	display_errors  ("coming here") ;
+				       console.log("Comoing here")
 			    		require 'vendor/autoload.php';
 
 					    $mail = new PHPMailer(true);       

@@ -68,7 +68,7 @@
 					//Load phpmailer
 		    		require 'vendor/autoload.php';
 
-					$mail = new PHPMailer(true);       
+					//$mail = new PHPMailer(true);       
   
 
 
