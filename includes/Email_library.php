@@ -9,7 +9,7 @@ function sendEmail($email){
 
 					    $mail = new PHPMailer(true);       
 
-				        $mail->isSMTP();                                     
+				                                            
 				        $mail->Host ='email-smtp.us-east-1.amazonaws.com';						                     
 				        $mail->SMTPAuth = true;                               
 				        $mail->Username = 'AKIA5VEIXVYZ7WCS6SEY';     
