@@ -76,8 +76,8 @@
 				        //Server settings                                 
 				        $mail->Host ='email-smtp.us-east-1.amazonaws.com';						                     
 				        $mail->SMTPAuth = true;                               
-				        $mail->Username = 'AKIA5VEIXVYZ7WCS6SEY';     
-						$mail->Password = 'BHA/c8/k/EFXNdsp0ed10uwYZDHxhc2A3/jMvfOywsb7';						            
+				        $mail->Username = 'AKIA5VEIXVYZWAZLIMWN';     
+						$mail->Password = 'BNKmk5UbyxfnaLieYHPpXbsMV3ZlguWgplZcW0zeBYXy';						            
 						$mail->sender = 'nehadeshpande1995@gmail.com';
 				     	$mail->senderName = 'Neha Deshpande';
 					    $mail->recipient = $email;                           
@@ -89,20 +89,19 @@
 							'verify_peer_name' => false,
 							'allow_self_signed' => true
 							)
-							);
+						);
 				        $mail->setFrom($mail->sender,$mail->senderName);
 				        
 				        //Recipients
 				        $mail->addAddress($mail->recipient);              
 				        //Content
 				        $mail->isHTML(true);                                  
-				        $mail->Subject = 'ECommerce Site Sign Up';
-				        $mail->Body    = $message;
+				        $mail->Subject='ECommerce Site Sign Up';
+				        $mail->Body = $message;
 
 				        $mail->send();
 
-						//sendEmail($email);
-				        unset($_SESSION['firstname']);
+						unset($_SESSION['firstname']);
 				        unset($_SESSION['lastname']);
 				        unset($_SESSION['email']);
 
