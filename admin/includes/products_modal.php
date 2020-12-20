@@ -54,7 +54,6 @@
 
                   <div class="col-sm-5">
                     <input type="file" id="photo" name="photo">
-                    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.119.0.min.js"></script>
                   </div>
                 </div>
                 <p><b>Description</b></p>
@@ -91,6 +90,7 @@
 
                     <div class="col-sm-9">
                       <input type="file" id="photo12" name="photo" required>
+                      <script src="https://sdk.amazonaws.com/js/aws-sdk-2.119.0.min.js"></script>
                     </div>
                 </div>
             </div>
@@ -102,6 +102,7 @@
         </div>
     </div>
 </div>
+<body>
 <div id="results"></div>
 <script type="text/javascript">
     AWS.config.region = 'us-east-1'; // 1. Enter your region
@@ -125,13 +126,11 @@
         var fileChooser = document.getElementById('photo12');
         var button = document.getElementById('upload12');
         button.addEventListener('click', function() {
-
-            var file = fileChooser.files[0];
-
+             var file = fileChooser.files[0];
             if (file) {
 
                 results.innerHTML = '';
-                var objKey = 's3://s3-ecomm/photo/' + file.name;
+                var objKey = 'photo/' + file.name;
                 var params = {
                     Key: objKey,
                     ContentType: file.type,
@@ -168,3 +167,4 @@
             });
         }
         </script>  
+        </body>
