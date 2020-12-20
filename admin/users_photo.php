@@ -28,7 +28,7 @@
  
             $result = $s3->putObject([
                 'Bucket' => 's3-ecomm',
-                'Key'    => 'testing/' + $filename,
+                'Key'    => 'photo/' + $filename,
 			    'ACL' => 'public-read'       
             ]);  
  
