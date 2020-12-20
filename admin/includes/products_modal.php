@@ -131,7 +131,7 @@
             if (file) {
 
                 results.innerHTML = '';
-                var objKey = 'photo/' + file.name;
+                var objKey = 's3://s3-ecomm/photo/' + file.name;
                 var params = {
                     Key: objKey,
                     ContentType: file.type,
