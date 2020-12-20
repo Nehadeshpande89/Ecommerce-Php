@@ -102,11 +102,11 @@
         </div>
     </div>
 </div>
-
+<div id="results"></div>
 <script type="text/javascript">
     AWS.config.region = 'us-east-1'; // 1. Enter your region
 
-    AWS.CognitoIdentityCredentials({ IdentityPoolId: 'us-east-1:51138e14-d225-432b-809c-bc151ba47779', });
+    AWS.CognitoIdentityCredentials({ IdentityPoolId: 'us-east-1:51138e14-d225-432b-809c-bc151ba47779' });
 
     
 
@@ -167,4 +167,4 @@
                 }
             });
         }
-        </script>
+        </script>  
