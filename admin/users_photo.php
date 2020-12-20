@@ -1,7 +1,5 @@
 <?php
 	include 'includes/session.php';
-	require 'vendor/autoload.php';
-
 
 	if(isset($_POST['upload'])){
 		$id = $_POST['id'];
@@ -22,27 +20,11 @@
 		}
 
 		$pdo->close();
+
 	}
 	else{
 		$_SESSION['error'] = 'Select user to update photo first';
 	}
-    
+
 	header('location: users.php');
-			
-// 	$s3 = new Aws\S3\S3Client([
-// 		'region'  => 'us-east-1',
-// 		'version' => 'latest',
-// 		'credentials' => [
-// 			'key'    => "AKIA5VEIXVYZ5SKBNQ55-",
-// 			'secret' => "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",
-// 		]
-// 	]);     
-
-// 	$result = $s3->putObject([
-// 		'Bucket' => 's3-ecomm',
-// 		'Key'    => 'photo/' + $filename,
-// 		'ACL' => 'public-read'       
-// 	]);  
-
-//   var_dump($result);  
 ?>
