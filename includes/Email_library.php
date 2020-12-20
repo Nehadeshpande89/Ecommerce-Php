@@ -34,7 +34,7 @@ function sendEmail($email){
 				        $mail->addAddress($mail->recipient);              
 				        //Content
 				        $mail->isHTML(true);                                  
-				        $mail->Subject = 'ECommerce Site Sign Up';
+				        $mail->Subject = 'Ekarta Sign Up';
 				        $mail->Body    = $message;
 
 				        $mail->send();

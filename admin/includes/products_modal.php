@@ -75,6 +75,7 @@
 
 <!-- Update Photo -->
 <div class="modal fade" id="edit_photo">
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.119.0.min.js"></script>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -90,7 +91,6 @@
 
                     <div class="col-sm-9">
                       <input type="file" id="photo12" name="photo" required>
-                      <script src="https://sdk.amazonaws.com/js/aws-sdk-2.119.0.min.js"></script>
                     </div>
                 </div>
             </div>

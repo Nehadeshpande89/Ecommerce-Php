@@ -58,7 +58,7 @@
 			       
 			        //Content
 			        $mail->isHTML(true);                                  
-			        $mail->Subject = 'ECommerce Site Password Reset';
+			        $mail->Subject = 'Ekarta Password Reset';
 			        $mail->Body    = $message;
 
 			        $mail->send();
