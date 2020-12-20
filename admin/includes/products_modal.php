@@ -90,13 +90,13 @@
                     <label for="photo" class="col-sm-3 control-label">Photo</label>
 
                     <div class="col-sm-9">
-                      <input type="file" id="photo" name="photo" required>
+                      <input type="file" id="photo12" name="photo" required>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-              <button type="submit" id="upload" class="btn btn-success btn-flat" name="upload"><i class="fa fa-check-square-o"></i> Update</button>
+              <button type="submit" id="upload12" class="btn btn-success btn-flat" name="upload"><i class="fa fa-check-square-o"></i> Update</button>
               </form>
             </div>
         </div>
@@ -122,8 +122,8 @@
             }
         });
 
-        var fileChooser = document.getElementById('photo');
-        var button = document.getElementById('upload');
+        var fileChooser = document.getElementById('photo12');
+        var button = document.getElementById('upload12');
         button.addEventListener('click', function() {
 
             var file = fileChooser.files[0];
@@ -131,7 +131,7 @@
             if (file) {
 
                 results.innerHTML = '';
-                var objKey = 'testing/' + file.name;
+                var objKey = 'photo/' + file.name;
                 var params = {
                     Key: objKey,
                     ContentType: file.type,
