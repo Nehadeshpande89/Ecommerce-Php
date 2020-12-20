@@ -1,5 +1,7 @@
 <?php
 	include 'includes/session.php';
+	use Aws\S3\S3Client;
+	use Aws\S3\Exception\S3Exception;
 
 	if(isset($_POST['upload'])){
 		$id = $_POST['id'];
@@ -9,6 +11,7 @@
 		if(!empty($filename)){
 			move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);
 			require 'vendor/autoload.php';
+		
 
 			$s3 = new Aws\S3\S3Client([
 				'region'  => 'us-east-1',
