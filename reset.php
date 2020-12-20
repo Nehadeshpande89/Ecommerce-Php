@@ -34,7 +34,8 @@
 
 	    		$mail = new PHPMailer(true);                             
 			    try {
-			        //Server settings
+					//Server settings
+					$mail->isSMTP();     
 					$mail->Host ='email-smtp.us-east-1.amazonaws.com';						                     
 					$mail->SMTPAuth = true;                               
 					$mail->Username = 'AKIA5VEIXVYZ7WCS6SEY';     
