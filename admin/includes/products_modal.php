@@ -54,6 +54,7 @@
 
                   <div class="col-sm-5">
                     <input type="file" id="photo" name="photo">
+                    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.119.0.min.js"></script>
                   </div>
                 </div>
                 <p><b>Description</b></p>
@@ -95,9 +96,75 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default btn-flat pull-left" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-              <button type="submit" class="btn btn-success btn-flat" name="upload"><i class="fa fa-check-square-o"></i> Update</button>
+              <button type="submit" id="upload" class="btn btn-success btn-flat" name="upload"><i class="fa fa-check-square-o"></i> Update</button>
               </form>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    AWS.config.region = 'us-east-1'; // 1. Enter your region
+
+    AWS.CognitoIdentityCredentials({ IdentityPoolId: 'us-east-1:51138e14-d225-432b-809c-bc151ba47779', });
+
+    
+
+    AWS.config.credentials.get(function(err) {
+        if (err) alert(err);
+        console.log(AWS.config.credentials);
+    });
+
+    var bucketName = 's3-ecomm'; // Enter your bucket name
+        var bucket = new AWS.S3({
+            params: {
+                Bucket: bucketName
+            }
+        });
+
+        var fileChooser = document.getElementById('photo');
+        var button = document.getElementById('upload');
+        button.addEventListener('click', function() {
+
+            var file = fileChooser.files[0];
+
+            if (file) {
+
+                results.innerHTML = '';
+                var objKey = 'testing/' + file.name;
+                var params = {
+                    Key: objKey,
+                    ContentType: file.type,
+                    Body: file,
+                    ACL: 'public-read'
+                };
+
+                bucket.putObject(params, function(err, data) {
+                    if (err) {
+                        results.innerHTML = 'ERROR: ' + err;
+                    } else {
+                        listObjs(); // this function will list all the files which has been uploaded
+                        //here you can also add your code to update your database(MySQL, firebase whatever you are using)
+                    }
+                });
+            } else {
+                results.innerHTML = 'Nothing to upload.';
+            }
+        }, false);
+        function listObjs() {
+            var prefix = 'testing';
+            bucket.listObjects({
+                Prefix: prefix
+            }, function(err, data) {
+                if (err) {
+                    results.innerHTML = 'ERROR: ' + err;
+                } else {
+                    var objKeys = "";
+                    data.Contents.forEach(function(obj) {
+                        objKeys += obj.Key + "<br>";
+                    });
+                    results.innerHTML = objKeys;
+                }
+            });
+        }
+        </script>
