@@ -7,7 +7,7 @@
 		$temp_file_location = $_FILES['photo']['tmp_name']; 
 
 		if(!empty($filename)){
-		//	move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);
+			move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);
 			require 'vendor/autoload.php';
 
 			$s3 = new Aws\S3\S3Client([
