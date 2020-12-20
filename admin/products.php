@@ -215,22 +215,22 @@ function getRow(id){
       $('#edit_price').val(response.price);
       CKEDITOR.instances["editor2"].setData(response.description);
       getCategory();
-      require 'vendor/autoload.php';
+      // require 'vendor/autoload.php';
  
-      $s3 = new Aws\S3\S3Client([
-          'region'  => 'us-east-1',
-          'version' => 'latest',
-          'credentials' => [
-              'key'    => "AKIA5VEIXVYZ5SKBNQ55-",
-              'secret' => "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",
-          ]
-      ]);     
+      // $s3 = new Aws\S3\S3Client([
+      //     'region'  => 'us-east-1',
+      //     'version' => 'latest',
+      //     'credentials' => [
+      //         'key'    => "AKIA5VEIXVYZ5SKBNQ55-",
+      //         'secret' => "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",
+      //     ]
+      // ]);     
 
-      $result = $s3->putObject([
-          'Bucket' => 's3-ecomm',
-          'Key'    => $file_name,
-          'SourceFile' => $temp_file_location         
-      ]);
+      // $result = $s3->putObject([
+      //     'Bucket' => 's3-ecomm',
+      //     'Key'    => $file_name,
+      //     'SourceFile' => $temp_file_location         
+      // ]);
 }
     }
   });
