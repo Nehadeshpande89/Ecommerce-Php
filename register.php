@@ -20,7 +20,7 @@
 
 		if(!isset($_SESSION['captcha'])){
 			require('recaptcha/src/autoload.php');		
-			$recaptcha = new \ReCaptcha\ReCaptcha('6Lc3RA0aAAAAAA1s5NSvGhzbTFz3ZPRXLTvE9Vcx',new \ReCaptcha\RequestMethod\SocketPost());
+			$recaptcha = new \ReCaptcha\ReCaptcha('6Le1TQ0aAAAAAHLkz34Errvs_mzbmIfOJ9rm9-wn',new \ReCaptcha\RequestMethod\SocketPost());
 			$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 
 	

@@ -37,7 +37,7 @@
   	<div class="register-box-body">
     	<p class="login-box-msg">Register a new membership</p>
 
-    	<form action="register.php" method="POST">
+    	<form action="register.php" class="" method="POST">
           <div class="form-group has-feedback">
             <input type="text" class="form-control" name="firstname" placeholder="Firstname" value="<?php echo (isset($_SESSION['firstname'])) ? $_SESSION['firstname'] : '' ?>" required>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -79,7 +79,6 @@
       <a href="index.php"><i class="fa fa-home"></i> Home</a>
   	</div>
 </div>
-<script src="https://www.google.com/recaptcha/api.js?render=6LegPg0aAAAAAEzUi9qA6yjuii7uli2EltGtlSTc"></script>
 
 <?php include 'includes/scripts.php' ?>
 </body>
